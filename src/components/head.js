@@ -1,7 +1,7 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../media.css';
-import icon from '../img/icon.png'
+
 
 function App(){
     return(
