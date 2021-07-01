@@ -4,6 +4,8 @@ import jogos from './pages/Categorias';
 import home from './pages/Home';
 import login from './pages/login';
 import register from './pages/register';
+import forum from './pages/forum';
+import publication from './pages/publications';
 
 function route (){
     return (
@@ -12,6 +14,8 @@ function route (){
             <Route path="/categoria" component = {jogos}/>
             <Route path="/login" component = {login}/>
             <Route path="/register" component = {register}/>
+            <Route path="/forum" component = {forum}/>
+            <Route path="/publication" component = {publication}/>
         </BrowserRouter>
     )
 }

@@ -9,8 +9,13 @@ function login () {
   return (
   <React.Fragment>
     <Head></Head>
-    <div class="container mt-3 bg-dark">
-     
+      <div class="container mt-3 ">
+        <h2  style={{justifyContent:'center', alignItems:'center', textAlign:'center', color:'white'}}>Publicações do Forun</h2>
+        <div class="bg-dark card text-light m-3 rounded border border-success p-3" style={{height:60}}>
+          <p style={{fontSize:19}}>
+           <a href="#" style={{color:'white', textDecoration:'none'}}> Sprites RPG</a>
+          </p>  
+        </div>
     </div>    
     <footer style={{marginTop:500}}>
       <div class="bg-dark text-warning pt-3" style={{height:'75px', textAlign:'center'}}>
