@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Head from '../components/head';
+import Head from '../components/headlogin';
 
-export default class login extends Component {
+export default class forum extends Component {
   constructor(props){
     super(props);
     this.state ={
-       email:sessionStorage.getItem('@web/email')              
+       email:sessionStorage.getItem('@web/email'),
+       image:sessionStorage.getItem('@web/image')               
     }
 
   }
@@ -17,7 +18,9 @@ export default class login extends Component {
     <React.Fragment>
       <Head></Head>
       <div class="container mt-3 bg-dark">
-        <h1>{this.state.email}</h1>
+      <div class="container mt-3 bg-dark">
+        <span style={{fontSize:15, color:'white'}}>{this.state.email}</span>
+      </div>
       </div>
       <footer style={{marginTop:500}}>
         <div class="bg-dark text-warning pt-3" style={{height:'75px', textAlign:'center'}}>

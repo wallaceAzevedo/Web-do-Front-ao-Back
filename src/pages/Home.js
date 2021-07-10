@@ -7,9 +7,9 @@ import Image2 from'../img/zetsu2.png'
 import Image3 from'../img/zetsu.png'
 import Image4 from'../img/field.png'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel} from 'react-responsive-carousel';
+//import { Carousel} from 'react-responsive-carousel';
 
-function home1(){
+function home(){
     return(
         <React.Fragment>
         <Head></Head>
@@ -55,4 +55,4 @@ function home1(){
     )
 }
 
-export default home1;
+export default home;

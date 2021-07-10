@@ -6,6 +6,7 @@ import login from './pages/login';
 import register from './pages/register';
 import forum from './pages/forum';
 import publication from './pages/publications';
+import profile from './pages/profile';
 
 function route (){
     return (
@@ -16,6 +17,7 @@ function route (){
             <Route path="/register" component = {register}/>
             <Route path="/forum" component = {forum}/>
             <Route path="/publication" component = {publication}/>
+            <Route path="/profile" component = {profile}/>
         </BrowserRouter>
     )
 }

@@ -39,9 +39,6 @@ export default class login extends Component {
       .then(response => response.json())
       .then(response => {this.setState({user:response || [], redirect:true })})
       .then(result => console.log(result))
-      .cath(error => console.log('error', error))
-     
-    
       .catch(error => console.log('error', error));
       
       e.preventDefault()
@@ -54,7 +51,8 @@ export default class login extends Component {
         sessionStorage.setItem('@web/id', this.state.user.id);
         sessionStorage.setItem('@web/name', this.state.user.name);
         sessionStorage.setItem('@web/email', this.state.user.email);
-        
+        sessionStorage.setItem('@web/image', this.state.user.image);
+        //sessionStorage.setItem('@web/senha', this.state.user.senha);
         return  <Redirect
                   to={{
                   pathname: "/forum",                

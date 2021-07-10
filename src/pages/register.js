@@ -19,7 +19,7 @@ export default class Cadastro extends Component {
     this.cadastrar = this.cadastrar.bind(this)
   }
   cadastrar(e){ 
-    if(this.state.senha != this.state.senha2){
+    if(this.state.senha !== this.state.senha2){
       alert("Informe duas senhas iguais!")
     }else{
     var myHeaders = new Headers();
@@ -28,7 +28,8 @@ export default class Cadastro extends Component {
     var raw = JSON.stringify({
       "name": this.state.name,
       "email": this.state.email,
-      "senha": this.state.senha
+      "senha": this.state.senha,
+      "image":"https://lh3.googleusercontent.com/zEpDT5T89vBw_GP4SW83HaK5ilvMWAH64dCz-5UEhaD4T98SaUA6SkJCm2gQ4rE8wwoBLg=s151"
     });
 
     var requestOptions = {
@@ -41,7 +42,7 @@ export default class Cadastro extends Component {
     fetch("http://localhost:8080/register", requestOptions)
         .then(response => response.json())
         .then(response =>{
-          if(response == 'Já existe esse email'){
+          if(response === 'Já existe esse email'){
             alert('Já existe esse email cadastrado!!!')
           }else{
             this.setState({redirect:true})
